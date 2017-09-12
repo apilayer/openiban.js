@@ -1,0 +1,26 @@
+{
+  "name": "openiban.js",
+  "version": "0.1.0",
+  "description": "openiban.com client for node and the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fourcube/openiban.js.git"
+  },
+  "keywords": [
+    "openiban.com",
+    "iban",
+    "validation",
+    "iban",
+    "api"
+  ],
+  "author": "Chris Grieger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fourcube/openiban.js/issues"
+  },
+  "homepage": "https://github.com/fourcube/openiban.js#readme"
+}
