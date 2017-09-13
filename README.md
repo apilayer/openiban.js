@@ -23,7 +23,7 @@ Or you can include it on your page through a CDN (e.g. unpkg):
 openiban.js provides a Promise API to the openiban.com IBAN validation webservice.
 
 ## Node.js
-```
+```js
 const Openiban = require('openiban');
 
 openiban
@@ -34,6 +34,40 @@ openiban
   .catch((err) => {
     // some http error has occurred
   });
+```
+
+## Typescript
+
+openiban.js also publishes Typescript declarations.
+
+```typescript
+import * as Openiban from 'openiban';
+
+Openiban.validate('DE89370400440532013000')
+  .then((r: ValidationResult) => {
+    console.log(r);
+    // {
+    //   "valid": true,
+    //   "messages": [
+    //     "Bank code valid: 37040044"
+    //   ],
+    //   "iban": "DE89370400440532013000",
+    //   "bankData": {
+    //     "bankCode": "37040044",
+    //     "name": "Commerzbank",
+    //     "zip": "50447",
+    //     "city": "Köln",
+    //     "bic": "COBADEFFXXX"
+    //   },
+    //   "checkResults": {
+    //     "bankCode": true
+    //   }
+    // }
+  })
+  .catch((e) => {
+    // some http error has occurred
+    console.error(e);
+  })
 ```
 
 ## Browser

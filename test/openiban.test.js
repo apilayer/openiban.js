@@ -2,7 +2,7 @@ var assert = require('assert');
 var expect = require('chai').expect;
 
 let Openiban;
-if (Openiban) {
+if (window.Openiban) {
   // Browser
   Openiban = window.Openiban;
 } else {

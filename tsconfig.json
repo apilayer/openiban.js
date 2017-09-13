@@ -21,7 +21,6 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "declaration": true,
-    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "declarationDir": "types"

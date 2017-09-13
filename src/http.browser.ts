@@ -1,19 +1,18 @@
 import { OpenibanResponse } from './types';
 
 export function get(url: string): Promise<OpenibanResponse> {
-
   return new Promise((resolve, reject) => {
     var oReq = new XMLHttpRequest();
 
-    oReq.addEventListener("load", () => {
+    oReq.addEventListener('load', () => {
       if (oReq.status === 200) {
-        resolve(JSON.parse(oReq.responseText));
+        resolve(JSON.parse(oReq.response));
       } else {
-        reject('request failed');
+        reject(new Error(oReq.response));
       }
     });
 
-    oReq.open("GET", url);
+    oReq.open('GET', 'https://openiban.com' + url);
     oReq.send();
   });
 }

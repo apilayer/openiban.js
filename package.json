@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "openiban.com client for node and the browser",
   "main": "./dist/openiban.node.js",
+  "browser": "./dist/openiban.browser.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "webpack",
     "test": "rm -rf dist; npm run build && npm run test:node && npm run test:browser ",
@@ -39,6 +41,5 @@
     "webpack": "^3.5.6",
     "webpack-merge": "^4.1.0"
   },
-  "browser": "./dist/openiban.browser.ts",
   "dependencies": {}
 }

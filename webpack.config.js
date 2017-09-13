@@ -8,7 +8,6 @@ var baseConfig = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: "[name].js",
-    libraryExport: 'default',
   },
   module: {
     rules: [
@@ -23,10 +22,12 @@ var baseConfig = {
 var serverConfig = {
   target: 'node',
   entry: {
-    'openiban.node': './src/main.ts',
+    'openiban.node': './src/index.ts',
   },
   output: {
-    libraryTarget: 'commonjs'
+    library: 'Openiban',
+    libraryTarget: 'umd',
+    umdNamedDefine: false
   },
   resolve: {
     alias: {
@@ -38,7 +39,7 @@ var serverConfig = {
 var clientConfig = {
   target: 'web', // <=== can be omitted as default is 'web'
   entry: {
-    'openiban.browser': './src/main.ts',
+    'openiban.browser': './src/index.ts',
   },
   output: {
     library: 'Openiban',
