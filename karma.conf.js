@@ -7,6 +7,7 @@ module.exports = function (config) {
     ],
 
     preprocessors: {
+      'src/**/*.ts': ['webpack'],
       'test/**/*.js': ['webpack']
     },
 
@@ -17,6 +18,18 @@ module.exports = function (config) {
       }
     },
 
-    browsers: ['Chrome']
+    browsers: ['ChromeHeadless'],
+
+    customLaunchers: {
+      ChromeHeadless: {
+        base: 'Chrome',
+        flags: [
+          '--disable-gpu',
+          '--headless',
+          '--no-sandbox',
+          '--remote-debugging-port=9222',
+        ],
+      },
+    }
   });
 };
