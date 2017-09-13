@@ -9,7 +9,6 @@ var baseConfig = {
     path: path.resolve(__dirname, 'dist'),
     filename: "[name].js",
     libraryExport: 'default',
-    libraryTarget: 'commonjs'
   },
   module: {
     rules: [
@@ -26,6 +25,9 @@ var serverConfig = {
   entry: {
     'openiban.node': './src/main.ts',
   },
+  output: {
+    libraryTarget: 'commonjs'
+  },
   resolve: {
     alias: {
       'openiban_http': './http.ts'
@@ -37,6 +39,10 @@ var clientConfig = {
   target: 'web', // <=== can be omitted as default is 'web'
   entry: {
     'openiban.browser': './src/main.ts',
+  },
+  output: {
+    library: 'Openiban',
+    libraryTarget: 'window'
   },
   resolve: {
     alias: {

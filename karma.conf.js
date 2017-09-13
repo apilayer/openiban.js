@@ -3,12 +3,18 @@ module.exports = function (config) {
     frameworks: ['mocha'],
 
     files: [
-      'test/**/*.js'
+      'dist/openiban.browser.js',
+      'test/index.js'
     ],
 
     preprocessors: {
-      'src/**/*.ts': ['webpack'],
-      'test/**/*.js': ['webpack']
+      'test/index.js': ['webpack']
+    },
+
+    webpack: require('./webpack.test.config'),
+
+    webpackMiddleware: {
+      stats: 'errors-only'
     },
 
     client: {
@@ -20,16 +26,14 @@ module.exports = function (config) {
 
     browsers: ['ChromeHeadless'],
 
-    customLaunchers: {
-      ChromeHeadless: {
-        base: 'Chrome',
-        flags: [
-          '--disable-gpu',
-          '--headless',
-          '--no-sandbox',
-          '--remote-debugging-port=9222',
-        ],
-      },
-    }
+    ChromeHeadless: {
+      base: 'Chrome',
+      flags: [
+        '--disable-gpu',
+        '--headless',
+        '--no-sandbox',
+        '--remote-debugging-port=9222',
+      ],
+    },
   });
 };

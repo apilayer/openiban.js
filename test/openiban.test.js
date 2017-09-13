@@ -1,10 +1,12 @@
 var assert = require('assert');
 var expect = require('chai').expect;
-let Openiban;
 
-if (global.window) {
-  Openiban = require('../dist/openiban.browser.js');
+let Openiban;
+if (Openiban) {
+  // Browser
+  Openiban = window.Openiban;
 } else {
+  // Node
   Openiban = require('../dist/openiban.node.js');
 }
 

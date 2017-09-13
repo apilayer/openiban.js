@@ -4,7 +4,9 @@
   "description": "openiban.com client for node and the browser",
   "main": "./dist/openiban.node.js",
   "scripts": {
-    "test": "mocha -C",
+    "build": "webpack",
+    "test": "rm -rf dist; npm run build && npm run test:node && npm run test:browser ",
+    "test:node": "mocha -C --globals Openiban test/**/*.test.js",
     "test:browser": "karma start --single-run"
   },
   "repository": {
