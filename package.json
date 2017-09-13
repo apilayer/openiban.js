@@ -1,6 +1,6 @@
 {
   "name": "openiban",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "openiban.com client for node and the browser",
   "main": "./dist/openiban.node.js",
   "browser": "./dist/openiban.browser.js",
