@@ -6,11 +6,11 @@ openiban.com API client for node and the browser. TypeScript typings are include
 
 You can install openiban.js through npm or yarn.
 
-`npm i -S openiban.js`
+`npm i -S openiban`
 
 or
 
-`yarn add openiban.js`
+`yarn add openiban`
 
 Or you can include it on your page through a CDN (e.g. unpkg):
 
