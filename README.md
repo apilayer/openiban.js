@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/fourcube/openiban.js.svg)](https://travis-ci.org/fourcube/openiban.js) [![npm version](https://img.shields.io/npm/v/openiban.svg)](https://www.npmjs.com/package/openiban)
 
-[openiban.com](https://openiban.com) API client for node and the browser. TypeScript typings are included in the repository.
+Official [openiban.com](https://openiban.com) API client for node and the browser. TypeScript typings are included in the repository.
 
 # Getting it
 
