@@ -10,7 +10,7 @@ export function get(url: string): Promise<OpenibanResponse> {
     method: 'get',
     headers: { 'Accept': '*/*' }
   };
-  
+
   return new Promise((resolve, reject) => {
     https.get(options, (res: any) => {
       res.on('data', (d: String | Buffer) => {

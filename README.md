@@ -17,7 +17,7 @@ or
 Or you can include it on your page through a CDN (e.g. unpkg):
 
 ```html
-<script type="text/javascript" src="//unpkg.com/openiban.js@0.1.0/dist/openiban.browser.js"></script>
+<script type="text/javascript" src="//unpkg.com/openiban@1.0.1/dist/openiban.browser.js"></script>
 ```
 
 # Using it
