@@ -89,7 +89,6 @@ function validate(iban, opts) {
     if (opts === void 0) { opts = defaultOptions; }
     var optionsString = "?getBIC=" + (opts.getBIC || 'false') + "&validateBankCode=" + (opts.validateBankCode || 'false');
     var url = '/validate/' + iban + optionsString;
-    console.log(url);
     return openiban_http_1.get(url)
         .then(function (response) {
         return response;

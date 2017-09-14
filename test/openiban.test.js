@@ -1,8 +1,9 @@
 var assert = require('assert');
 var expect = require('chai').expect;
 
+const window = global.window;
 let Openiban;
-if (window.Openiban) {
+if (window && window.Openiban) {
   // Browser
   Openiban = window.Openiban;
 } else {

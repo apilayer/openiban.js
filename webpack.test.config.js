@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   target: 'web',
-  entry: './test/openiban.test.js',
+  entry: './test/index.js',
   resolve: {
     extensions: ['.js'],
   },
