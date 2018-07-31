@@ -110,7 +110,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var https = __webpack_require__(2);
 function get(url) {
     var options = {
-        host: 'openiban.com',
+        host: 'openiban.savedo.com',
         port: 443,
         path: url,
         method: 'get',
